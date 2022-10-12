@@ -18,7 +18,7 @@ const taskArray = [
     completed: true,
   },
   {
-    index: 4,
+    index: 3,
     description: "I love microverse",
     completed: false,
   },
@@ -30,11 +30,11 @@ const createList = () => {
   const sortedArray = taskArray.sort((a, b) => a.index - b.index);
   sortedArray.forEach((task) => {
     const eachTask = document.createElement("li");
-    eachTask.innerHTML = `<ul id="eachTask">
-        <ul><input type="checkbox" name=" " class="task">
+    eachTask.innerHTML = `<div id="eachTask">
+        <div><input type="checkbox" name=" " class="task">
         <label for="">${task.descriptions}</label></div>
         <i class="fa fa-ellipsis-v"></i>
-        </ul><hr>`;
+        </div><hr>`;
     list.appendChild(eachTask);
   });
 };
