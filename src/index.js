@@ -1,12 +1,12 @@
 import _ from "lodash";
 import "./style.css";
 
-import addedTask from "./module/class.js";
+import addedTask from "./modules/class.js";
 import {
   addToLocalStorage,
   getFromLocalStorage,
-} from "./module/localstorage.js";
-import displayList from "./module/displaylist.js";
+} from "./modules/localstorage.js";
+import displayList from "./modules/displaylist.js";
 
 const filledTask = document.getElementById("addButton");
 filledTask.addEventListener("click", () => {
