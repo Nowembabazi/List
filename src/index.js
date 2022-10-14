@@ -1,42 +1,39 @@
 import _ from "lodash";
 import "./style.css";
 
-const taskArray = [
-  {
-    index: 0,
-    descriptions: "I  will code",
-    completed: true,
-  },
-  {
-    index: 1,
-    descriptions: "i love code",
-    completed: false,
-  },
-  {
-    index: 2,
-    descriptions: "i like webpack",
-    completed: true,
-  },
-  {
-    index: 3,
-    description: "I love microverse",
-    completed: false,
-  },
-];
+import addedTask from "./modules/class.js";
+import {
+  addToLocalStorage,
+  getFromLocalStorage,
+} from "./modules/localstorage.js";
+import displayList from "./modules/displaylist.js";
 
-const list = document.getElementById("list");
+const filledTask = document.getElementById("addButton");
+filledTask.addEventListener("click", () => {
+  const myTask = document.getElementById("addTask");
+  addedTask.taskObject(myTask.value);
+  addedTask.reAssignIndex();
+  displayList();
+  myTask.value = "";
+});
 
-const createList = () => {
-  const sortedArray = taskArray.sort((a, b) => a.index - b.index);
-  sortedArray.forEach((task) => {
-    const eachTask = document.createElement("li");
-    eachTask.innerHTML = `<div id="eachTask">
-        <div><input type="checkbox" name=" " class="task">
-        <label for="">${task.descriptions}</label></div>
-        <i class="fa fa-ellipsis-v"></i>
-        </div><hr>`;
-    list.appendChild(eachTask);
-  });
+const handleInputChange = (id) => {
+  const theid = document.getElementById(`edible${id}`);
+  for (let p of addedTask.taskArray) {
+    if (p.index === id) {
+      p.description = theid.value;
+    }
+  }
+  addToLocalStorage();
+  displayList();
 };
+
+if (localStorage.getItem("storedTask") == null) {
+  addToLocalStorage();
+} else {
+  getFromLocalStorage();
+}
+
+window.handleInputChange = handleInputChange;
 
 document.addEventListener("DOMContentLoaded", createList);
