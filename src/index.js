@@ -7,14 +7,20 @@ import {
   getFromLocalStorage,
 } from "./modules/localstorage.js";
 import displayList from "./modules/displaylist.js";
+import checkBox from "./modules/checkbox.js";
 
 const filledTask = document.getElementById("addButton");
 filledTask.addEventListener("click", () => {
   const myTask = document.getElementById("addTask");
-  addedTask.taskObject(myTask.value);
-  addedTask.reAssignIndex();
-  displayList();
-  myTask.value = "";
+  if (myTask.value) {
+    addedTask.taskObject(myTask.value);
+    addedTask.reAssignIndex();
+    displayList();
+    myTask.value = "";
+    checkBox();
+  } else {
+    alert("Kindly fill the task to add");
+  }
 });
 
 const handleInputChange = (id) => {
@@ -34,6 +40,15 @@ if (localStorage.getItem("storedTask") == null) {
   getFromLocalStorage();
 }
 
-window.handleInputChange = handleInputChange;
+const clearBtn = document.getElementById("clear");
+clearBtn.addEventListener("click", () => {
+  let task = addedTask.getTasks();
+  let newArr = task.filter((each) => each.completed === false);
+  addedTask.taskArray = newArr;
+  addToLocalStorage();
+  addedTask.reAssignIndex();
+  window.location.reload();
+});
 
-document.addEventListener("DOMContentLoaded", createList);
+window.handleInputChange = handleInputChange;
+checkBox();
