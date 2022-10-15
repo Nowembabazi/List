@@ -7,7 +7,7 @@
   margin: auto;
 }
 
-#title {
+#heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,7 +29,7 @@ i {
   color: grey;
 }
 
-#addTask {
+#inputTask {
   font-style: italic;
   height: 20px;
   border: none;

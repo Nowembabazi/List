@@ -17708,7 +17708,7 @@ class Task {
     
         taskObject(addTask) {
             const eachTask = {
-                description : addTask,
+                description : inputTask,
                 completed : false,
                 index: 0
             }
@@ -17941,7 +17941,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const filledTask = document.getElementById('addButton')
 filledTask.addEventListener('click', () => {
-    const myTask = document.getElementById('addTask')
+    const myTask = document.getElementById('inputTask')
     _module_class_js__WEBPACK_IMPORTED_MODULE_2__["default"].taskObject(myTask.value)
     _module_class_js__WEBPACK_IMPORTED_MODULE_2__["default"].reAssignIndex()
     ;(0,_module_displaylist_js__WEBPACK_IMPORTED_MODULE_4__["default"])()
