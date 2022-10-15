@@ -11,7 +11,7 @@ import checkBox from "./modules/checkbox.js";
 
 const filledTask = document.getElementById("addButton");
 filledTask.addEventListener("click", () => {
-  const myTask = document.getElementById("addTask");
+  const myTask = document.getElementById("inputTask");
   if (myTask.value) {
     addedTask.taskObject(myTask.value);
     addedTask.reAssignIndex();
@@ -19,7 +19,7 @@ filledTask.addEventListener("click", () => {
     myTask.value = "";
     checkBox();
   } else {
-    alert("Kindly fill the task to add");
+    alert("fill the task to add");
   }
 });
 

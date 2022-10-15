@@ -7,7 +7,7 @@ class Task {
 
   taskObject(addTask) {
     const eachTask = {
-      description: addTask,
+      description: inputTask,
       completed: false,
       index: 0,
     };
