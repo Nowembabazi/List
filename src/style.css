@@ -3,21 +3,29 @@
 }
 
 #toDolist {
-  padding: 0 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin: auto;
 }
 
-#title {
+#heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 18px;
 }
 
-.eachTask,
+.eachTask {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
 #inputTask {
   width: 100%;
   display: flex;
@@ -25,31 +33,24 @@ h2 {
 }
 
 i {
-  padding-right: 5px;
-  color: grey;
+  padding-right: 8px;
+  color: rgb(97, 91, 91);
 }
 
 #inputTask {
   font-style: italic;
-  height: 20px;
+  height: 18px;
   border: none;
   width: 100%;
 }
 
 #clear {
-  height: 30px;
+  height: 27px;
   background-color: rgb(240, 240, 240);
   display: flex;
   justify-content: center;
   align-items: center;
-  color: grey;
-}
-
-@media screen and (min-width: 768px) {
-  #toDolist {
-    width: 70%;
-    margin: auto;
-  }
+  color: rgb(105, 102, 102);
 }
 
 button {
@@ -69,16 +70,12 @@ button {
 .task-item {
   height: 20px;
   border: none;
-  width: 80%;
+  width: 75%;
 }
 
 .inputWidth {
   width: 100%;
-  margin-bottom: 10px;
-}
-
-#hrId {
-  margin-bottom: 0;
+  margin-bottom: 12px;
 }
 
 ul {
@@ -87,5 +84,13 @@ ul {
 
 .completed-task {
   text-decoration: line-through;
-  color: grey;
+  color: rgb(92, 88, 88);
+}
+
+
+@media screen and (min-width: 768px) {
+  #toDolist {
+    width: 70%;
+    margin: auto;
+  }
 }

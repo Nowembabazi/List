@@ -19491,7 +19491,7 @@
 
     const filledTask = document.getElementById("addButton");
     filledTask.addEventListener("click", () => {
-      const myTask = document.getElementById("addTask");
+      const myTask = document.getElementById("inputTask");
       if (myTask.value) {
         _module_class_js__WEBPACK_IMPORTED_MODULE_2__["default"].taskObject(
           myTask.value

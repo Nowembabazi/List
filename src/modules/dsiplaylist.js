@@ -36,8 +36,6 @@ const displayList = () => {
 
         li.appendChild(deleteButton);
 
-        const horLine = document.createElement("hr");
-
         allTsk.appendChild(horLine);
       } else {
         const allTsk = document.createElement("div");
@@ -67,11 +65,6 @@ const displayList = () => {
           checkBox();
         };
 
-        li.appendChild(deleteButton);
-
-        const horLine = document.createElement("hr");
-
-        allTsk.appendChild(horLine);
       }
     }
   } else {
