@@ -10,7 +10,7 @@ import displayList from "./modules/displaylist.js";
 
 const filledTask = document.getElementById("addButton");
 filledTask.addEventListener("click", () => {
-  const myTask = document.getElementById("addTask");
+  const myTask = document.getElementById("inputTask");
   addedTask.taskObject(myTask.value);
   addedTask.reAssignIndex();
   displayList();
