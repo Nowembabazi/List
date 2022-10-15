@@ -24,7 +24,7 @@ const taskArray = [
   },
 ];
 
-const list = document.getElementById("list");
+const list = document.getElementById("order");
 
 const createList = () => {
   const sortedArray = taskArray.sort((a, b) => a.index - b.index);

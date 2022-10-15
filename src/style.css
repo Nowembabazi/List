@@ -8,18 +8,21 @@ ul {
 }
 
 #toDolist {
-  padding: 0 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin: auto;
 }
 
-#title {
+#heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-h1 {
-  font-size: 20px;
+h2 {
+  font-size: 18px;
 }
 
 #eachTask,
@@ -34,9 +37,9 @@ i {
   color: grey;
 }
 
-#addTask {
+#inputTask {
   font-style: italic;
-  height: 20px;
+  height: 22px;
   border: none;
 }
 
@@ -51,7 +54,7 @@ i {
 
 @media screen and (min-width: 768px) {
   #toDolist {
-    width: 70%;
+    width: 65%;
     margin: auto;
   }
 }
